@@ -3,7 +3,7 @@ https://openweathermap.org/
 
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
-https://api.openweathermap.org/data/2.5/weather?q=Yangon&appid=68cd13b633ac460847997ed354564d6a
+https://api.openweathermap.org/data/2.5/weather?q=Yangon&appid={API key}
 
 Icons
 npm i react-icons
@@ -15,4 +15,4 @@ Axios
 npm i axios
 
 API key
-68cd13b633ac460847997ed354564d6a
+Credential HaHa!!
