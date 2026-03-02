@@ -1,13 +1,22 @@
-import React from "react";
-import { WiDayCloudy, WiRain } from "react-icons/wi";
-import { RxBookmarkFilled } from "react-icons/rx";
+import Clock from 'react-clock';
+import { useState, useEffect } from 'react';
+import 'react-clock/dist/Clock.css'
 
 const Card = ({ data }) => {
+
+    const [ value, setValue ] = useState(new Date());
+
+    useEffect( () => {
+        const interval = setInterval( () => setValue(new Date()), 1000);
+        return () => {
+            clearInterval(interval);
+        }
+    }, []);
 
   if (JSON.stringify(data) !== "{}") {
     return (
       <div className="d-flex flex-column align-items-center gap-3">
-        <p>Date</p>
+        <Clock value={value} className="mt-4"/>
         <h2>
           {data.name}, {data.sys.country}{" "}
         </h2>
